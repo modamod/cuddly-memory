@@ -7,9 +7,8 @@ Vagrant.configure("2") do |config|
   ## Use all the defaults:
     master.vm.provision :salt do |salt|
 
-      salt.master = false
-      salt.minion_config = "salt/master"
-      salt.minion_id = 'master'
+      salt.master_config = "salt/master"
+      salt.minion_id = 'master' # Not used now but possibly I may add minion config to the master at some point
       salt.no_minion = true
       salt.install_master = true
       salt.run_highstate = false
