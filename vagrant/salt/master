@@ -1,11 +1,19 @@
-gitfs_provider: pygit2
-
+fileserver_backend:
+  - gitfs
+gitfs_provider: GitPython
+gitfs_base: master
 gitfs_remotes:
   - https://github.com/modamod/cuddly-memory.git:
     - root: salt
     - base: master
     - ssl_verify: False
-    - update_interval: 120
-
+    - update_interval: 60
+    - saltenv:
+      - base:
+        - ref: master
+      - prod:
+        - ref: prod
+      - stage:
+        - ref: develop
 interfaces: 0.0.0.0
 master: 10.0.0.50
