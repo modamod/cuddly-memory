@@ -9,11 +9,9 @@ gitfs_remotes:
     - ssl_verify: False
     - update_interval: 60
     - saltenv:
-      - base:
-        - ref: master
       - prod:
-        - ref: prod
-      - stage:
+        - ref: master
+      - dev:
         - ref: develop
 interfaces: 0.0.0.0
 master: 10.0.0.50

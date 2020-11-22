@@ -5,13 +5,7 @@ python3-pip:
 jdoe:
   user.present:
     - fullname: Jane Doe
-    - shell: /bin/bash
     - home: /home/jdoe
-    - empty_password: True
-    - uid: 4000
-    - gid: 4000
-    - groups:
-      - sudo
 
 /home/jdoe/venv/:
   virtualenv.managed:
@@ -19,3 +13,5 @@ jdoe:
     - requirements: salt://common/files/requirements.txt
     - python: python3
     - user: jdoe
+    - require:
+      - jdoe
