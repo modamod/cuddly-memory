@@ -17,6 +17,7 @@ virtualenv:
 
 /home/jdoe/venv:
   virtualenv.managed:
+    - venv_bin: "python3 -m virtualenv"
     - system_site_packages: False
     - requirements: salt://common/files/requirements.txt
     - python: python3
