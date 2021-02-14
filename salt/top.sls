@@ -1,9 +1,3 @@
-{% if grains['id'].startswith('master')}
-prod:
+{{ saltenv }}:
   '*':
     - common
-{% else %}
-dev:
-  '*':
-    - common
-{% endif %}
