@@ -10,7 +10,7 @@ jdoe:
 python3-virtualenv:
   pkg.installed
 
-virtualenvwrapper:
+virtualenv:
   pip.installed:
     - require:
       - pkg: python3-pip
