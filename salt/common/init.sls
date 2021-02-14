@@ -7,6 +7,9 @@ jdoe:
     - fullname: Jane Doe
     - home: /home/jdoe
 
+python3-virtualenv:
+  pkg.installed:
+
 /home/jdoe/venv:
   virtualenv.managed:
     - system_site_packages: False
