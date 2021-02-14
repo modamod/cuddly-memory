@@ -8,7 +8,7 @@ jdoe:
     - home: /home/jdoe
 
 python3-virtualenv:
-  pkg.installed:
+  pkg.installed
 
 /home/jdoe/venv:
   virtualenv.managed:
