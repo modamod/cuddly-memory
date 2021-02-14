@@ -7,7 +7,7 @@ jdoe:
     - fullname: Jane Doe
     - home: /home/jdoe
 
-/home/jdoe/venv/:
+/home/jdoe/venv:
   virtualenv.managed:
     - system_site_packages: False
     - requirements: salt://common/files/requirements.txt
