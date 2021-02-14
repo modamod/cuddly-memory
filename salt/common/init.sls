@@ -10,6 +10,11 @@ jdoe:
 python3-virtualenv:
   pkg.installed
 
+virtualenvwrapper:
+  pip.installed:
+    - require:
+      - pkg: python3-pip
+
 /home/jdoe/venv:
   virtualenv.managed:
     - system_site_packages: False
